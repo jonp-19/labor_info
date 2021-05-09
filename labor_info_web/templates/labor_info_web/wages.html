@@ -1,0 +1,48 @@
+{% extends 'labor_info_web/base.html' %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+    <h3>Wage Information</a></h3>
+{% endblock page_header %}
+
+{% block content %}
+<div class="column">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">What should I do if my employer isn't paying me correctly?</h5>
+            <p class="card-text">If an employer does not pay all the wages owed to an employee in a timely manner, 
+                the employee can file a wage claim with TWC. More information about the wage claim process and an 
+                electronic copy of the wage claim form is available on TWC’s webpage. 
+                Once you complete the form, you can fax it to 512-475-3025. A wage claim must be filed within 
+                180 days of when payment was due. You can contact TWC’s Labor Law Division at 800-832-9243 for 
+                further assistance.</p>
+            <a href="https://www.twc.texas.gov/jobseekers/how-submit-wage-claim-under-texas-payday-law" 
+            class="btn btn-primary">How to submit a wage claim.</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Unemployment Specialist Contact Request</h5>
+            <p class="card-text">A complaint can also be filed with the U.S. Department of Labor’s Wage & Hour Division (DOL). 
+                A complaint with DOL differs from a wage claim filed with TWC in that it covers more time – up to two years – 
+                and all complaints are kept confidential, so the employer would not know you had filed the complaint. 
+                In addition, DOL has the authority to investigate the employer’s entire payroll procedures for all employees, 
+                while a wage claim with TWC covers only the individual who files the wage claim. The DOL Wage & Hour Division 
+                can provide you with information as to what sorts of claims or complaints they accept and how their process works. 
+                They can be contacted at 866-487-9243.  They also have a webpage with information that might be helpful.
+            </p>
+            <a href="https://www.dol.gov/agencies/whd" class="btn btn-primary">Visit the Department of Labor online</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Appeals</h5>
+            <p class="card-text">You can also contact an attorney to pursue other legal recourse. If you need help finding 
+                an attorney, you can contact the State Bar of Texas’ Lawyer Referral & Information Service at 800-252-9690.
+            </p>
+            <a href="https://www.texasbar.com/AM/Template.cfm?Section=Lawyer_Referral_Service_LRIS_" 
+            class="btn btn-primary">Texas State Bar Lawyer Referral Service</a>
+        </div>
+    </div>
+  </div>
+{% endblock content %}

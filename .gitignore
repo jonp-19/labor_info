@@ -1,0 +1,5 @@
+1i_env/
+__pycache__/
+*.sqlite3
+.DS_Store
+li_env/

@@ -1,0 +1,58 @@
+{% extends 'labor_info_web/base.html' %}
+{% load bootstrap4 %}
+
+{% block page_header %}
+    <div class="jumbotron">
+        <hi class="display-3">Welcome to Labor Info provided by ____________.</hi>
+        <p class="lead">
+            Here you'll find helpful information related to various aspects of the employment relationship 
+            including unemployment benefits, wages, civil rights, and agency news.
+        </p>
+        </div>
+    <div class="card-deck">
+        <div class="card border-primary mb-3">
+            <h5 class="card-header">Unemployment Benefit Issues</h5>
+            <div class="card-body">
+            <p class="card-text">Solutions and information for common unemployment benefit issues.</p>
+            <a href="{% url 'labor_info_web:unemployment' %}" class="btn btn-primary">Unemployment benefits page.</a>
+            </div>
+        </div>
+        <div class="card border-primary mb-3">
+            <h5 class="card-header">Wage Issues</h5>
+            <div class="card-body">
+            <p class="card-text">Information regarding Texas Payday Law and the FLSA.</p>
+            <a href="{% url 'labor_info_web:wages' %}" class="btn btn-primary">Wage information page.</a>
+            </div>
+        </div>
+        <div class="card border-primary mb-3">
+            <h5 class="card-header">Workplace Issues</h5>
+            <div class="card-body">
+            <p class="card-text">Information regarding workplace safety, civil rights, and related issues.</p>
+            <a href="{% url 'labor_info_web:workplace' %}" class="btn btn-primary">Workplace issues page.</a>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck">
+        <div class="card border-primary mb-3">
+            <h5 class="card-header">Unemployment Benefit Issues</h5>
+            <div class="card-body">
+            <p class="card-text">Solutions and information for common unemployment benefit issues.</p>
+            <a href="{% url 'labor_info_web:unemployment' %}" class="btn btn-primary">Unemployment benefits page.</a>
+            </div>
+        </div>
+        <div class="card border-primary mb-3">
+            <h5 class="card-header">Wage Issues</h5>
+            <div class="card-body">
+            <p class="card-text">Information regarding Texas Payday Law and the FLSA.</p>
+            <a href="{% url 'labor_info_web:wages' %}" class="btn btn-primary">Wage information page.</a>
+            </div>
+        </div>
+        <div class="card border-primary mb-3">
+            <h5 class="card-header">Workplace Issues</h5>
+            <div class="card-body">
+            <p class="card-text">Information regarding workplace safety, civil rights, and related issues.</p>
+            <a href="{% url 'labor_info_web:workplace' %}" class="btn btn-primary">Workplace issues page.</a>
+            </div>
+        </div>
+    </div>
+{% endblock page_header %}
