@@ -14,7 +14,11 @@ class ContactRequestForm(forms.ModelForm):
             'email': 'Email', 'comment': 'Comment'
             }
         widgets = {
-            'comment': forms.Textarea(attrs={'cols': 80})
+            'comment': forms.Textarea(attrs={'cols': 80}),
+            'first_name': forms.TextInput(attrs={'size': 60}), 
+            'last_name': forms.TextInput(attrs={'size': 60}), 
+            'last_4_SSN': forms.TextInput(attrs={'size': 60}), 
+            'phone': forms.TextInput(attrs={'size': 60}),
             }
         help_texts = {
             'email': 'A valid email address, please.',

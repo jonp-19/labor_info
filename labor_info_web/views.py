@@ -46,3 +46,11 @@ def wages(request):
 def workplace(request):
     """View for workplace issues"""
     return render(request, 'labor_info_web/workplace.html')
+
+def other(request):
+    """View for workplace issues"""
+    return render(request, 'labor_info_web/other_resources.html')
+
+def training(request):
+    """View for workplace issues"""
+    return render(request, 'labor_info_web/training.html')

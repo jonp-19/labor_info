@@ -20,4 +20,8 @@ urlpatterns = [
     path('wages/', views.wages, name='wages'),
      # Page for workplace issues.
     path('workplace/', views.workplace, name='workplace'),
+    # Other resources
+    path('other/', views.other, name='other_resources'),
+    # Training resources
+    path('training/', views.training, name='training'),
     ]

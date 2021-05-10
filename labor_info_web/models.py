@@ -4,7 +4,7 @@ class ContactRequest(models.Model):
     """Contact request data model"""
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-    last_4_SSN = models.CharField(max_length=11)
+    last_4_SSN = models.CharField(max_length=4)
     phone = models.CharField(max_length=20)
     email = models.EmailField()
     comment = models.TextField()
