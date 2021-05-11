@@ -3,3 +3,32 @@
 {% block page_header %}
     <h1>Other resources</h1>
 {% endblock page_header %}
+
+{% block content %}
+<div class="column">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Vocational Rehabilitation Services</h5>
+            <p class="card-text">Texas Workforce Solutions - Vocational Rehabilitation Services offices 
+                are located in many cities around the state. You can contact them for information about services, 
+                to schedule an appointment to apply for services, or to determine what documents 
+                you may need to bring to an appointment.
+
+                Locate your nearest Texas Workforce Solutions - Vocational Rehabilitation Services office that 
+                provides services for people with disabilities by searching on ZIP code, city or county.</p>
+            <a href="https://webp.twc.state.tx.us/services/VRLookup/" 
+            class="btn btn-primary">Directory of Texas Workforce Solutions–Vocational Rehabilitation Services Offices</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Adult Education & Literacy</h5>
+            <p class="card-text">Adult education and literacy programs funded by the Texas Workforce Commission (TWC) 
+                provide English language, math, reading, and writing instruction to help students acquire the skills 
+                needed to succeed in the workforce, earn a high school equivalency, or enter college or career training.
+            </p>
+            <a href="https://tcall.tamu.edu/search.aspx" class="btn btn-primary">Find a program</a>
+        </div>
+    </div>
+  </div>
+{% endblock content %}

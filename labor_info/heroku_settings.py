@@ -21,7 +21,7 @@ ALLOWED_HOSTS = os.environ.get('ALLOWED_HOST')
 
 INSTALLED_APPS = [
     # My apps
-    'labor_info_webt',
+    'labor_info_web',
 
     # Third party apps.
     'bootstrap4',
@@ -119,7 +119,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # My settings
-
+EMAIL_HOST = os.environ.get('MAILGUN_SMTP_SERVER', '')
+EMAIL_PORT = os.environ.get('MAILGUN_SMTP_PORT', '')
+EMAIL_HOST_USER = os.environ.get('MAILGUN_SMTP_LOGIN', '')
+EMAIL_HOST_PASSWORD = os.environ.get('MAILGUN_SMTP_PASSWORD', '')
 
 # Heroku settings.
 import django_heroku

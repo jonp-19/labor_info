@@ -1,7 +1,40 @@
 {% extends 'labor_info_web/base.html' %}
 {% load bootstrap4 %}
 
+
+
 {% block page_header %}
+<script type="text/javascript">
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+</script>
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Disclaimer</h5>
+                </div>
+                <div class="modal-body">
+                    <p>The information found on this webpage is not intended as legal advice and is not a substitute for 
+                    individual consultation with an attorney.  This information is provided as a form of assistance 
+                    to the employees of Texas by ___________________. The information and views expressed below do not 
+                    constitute in any way an official position, policy, or pronouncement of TWC. 
+                    As interpretation of the law is not uniform, and because each situation must be decided 
+                    on an individual basis, it is not always safe to assume that a particular situation will 
+                    result in a particular outcome. There is no substitute for individual consultation with an attorney. 
+                    For assistance finding an attorney, you can contact the State Bar of Texas’ Lawyer Referral & 
+                    Information Service at 800-252-9690.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-lg m-auto" data-dismiss="modal">I accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <div class="jumbotron">
         <hi class="display-4">Welcome to Labor Info provided by ____________.</hi>
         <p class="lead">
@@ -47,7 +80,7 @@
             <h5 class="card-header">Other Agency Resources</h5>
             <div class="card-body">
             <p class="card-text">Information concerning other agency programs and resources such as 
-                Adult Education Literacy, Vocational Rehabilitation, and Career Schools.
+                Adult Education & Literacy and Vocational Rehabilitation.
             </p>
             <a href="{% url 'labor_info_web:other_resources' %}" class="btn btn-primary">Other resources.</a>
             </div>

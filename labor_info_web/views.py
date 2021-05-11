@@ -1,9 +1,29 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 
 from .models import BlogPost, ContactRequest
 from .forms import BlogForm, ContactRequestForm
-from django.http import Http404
+from django.http import Http404, HttpResponse 
+from django.core.mail import send_mail, BadHeaderError
 
+# Helper function
+def send_data(request):
+    form = ContactRequestForm(request.POST)
+    if form.is_valid():
+        subject = "Website Inquiry" 
+        body = {
+        'first_name': form.cleaned_data['first_name'], 
+        'last_name': form.cleaned_data['last_name'],
+        'last_4_SSN': form.cleaned_data['last_4_SSN'], 
+        'email': form.cleaned_data['email'],
+        'phone': form.cleaned_data['phone'], 
+        'comment':form.cleaned_data['comment'], 
+        }
+        message = "\n".join(body.values())
+
+        try:
+            send_mail(subject, message, 'admin@example.com', ['admin@example.com']) 
+        except BadHeaderError:
+            return HttpResponse('Invalid header found.')
 
 def index(request):
     """The home page for labor_info_web."""
@@ -25,6 +45,7 @@ def contact_request(request):
         form = ContactRequestForm(data=request.POST)
         if form.is_valid():
             form.save()
+            send_data(request)
             return redirect('/submitted')
 
     # Display a blank or invalid form.
