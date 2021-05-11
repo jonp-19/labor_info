@@ -6,7 +6,7 @@ from django.http import Http404, HttpResponse
 from django.core.mail import BadHeaderError, send_mail
 
 # Helper function
-def send_data(request):
+""" def send_data(request):
     form = ContactRequestForm(request.POST)
     if form.is_valid():
         subject = "Website Inquiry" 
@@ -23,7 +23,7 @@ def send_data(request):
         try:
             send_mail(subject, message, 'app212964741@heroku.com', ['jonpokorney@yahoo.com']) 
         except BadHeaderError:
-            return HttpResponse('Invalid header found.')
+            return HttpResponse('Invalid header found.') """
 
 def index(request):
     """The home page for labor_info_web."""
@@ -45,7 +45,7 @@ def contact_request(request):
         form = ContactRequestForm(data=request.POST)
         if form.is_valid():
             form.save()
-            send_data(request)
+            #send_data(request)
             return redirect('/submitted')
 
     # Display a blank or invalid form.
