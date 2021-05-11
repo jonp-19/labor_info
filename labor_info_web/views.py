@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from .models import BlogPost, ContactRequest
 from .forms import BlogForm, ContactRequestForm
 from django.http import Http404, HttpResponse 
-from django.core.mail import send_mail, BadHeaderError
+from django.core.mail import BadHeaderError, send_mail
 
 # Helper function
 def send_data(request):
