@@ -1,0 +1,1 @@
+web: gunicorn labor_info.wsgi --log-file -
