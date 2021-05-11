@@ -16,7 +16,7 @@ def send_data(form):
     'phone': form.cleaned_data['phone'], 
     'comment':form.cleaned_data['comment'], 
     }
-    message = "\n".join(body.values())
+    message = "/n".join(f'{k}: {v}' for k, v in body.items())
 
     try:
         send_mail(
