@@ -21,7 +21,7 @@ def send_data(form):
     try:
         send_mail(
             subject, message, 'sandboxdf44949aa3e844f5b366f03c1b9ff73c@mailgun.org', 
-            ['jonpokorney@gmail.com']
+            ['laborinfotest@gmail.com']
             ) 
     except BadHeaderError:
         return HttpResponse('Invalid header found.')
