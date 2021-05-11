@@ -5,11 +5,6 @@ from .forms import BlogForm, ContactRequestForm
 from django.http import Http404, HttpResponse 
 from django.core.mail import send_mail, BadHeaderError
 
-#import environ
-#import os
-
-#SEND_EMAIL_TO = os.environ.get('SEND_EMAIL_TO', 'app212964741@heroku.com')
-
 # Helper function
 def send_data(request):
     form = ContactRequestForm(request.POST)
@@ -26,7 +21,7 @@ def send_data(request):
         message = "\n".join(body.values())
 
         try:
-            send_mail(subject, message, 'app212964741@heroku.com', ['app212964741@heroku.com']) 
+            send_mail(subject, message, 'app212964741@heroku.com', ['jonpokorney@yahoo.com']) 
         except BadHeaderError:
             return HttpResponse('Invalid header found.')
 
