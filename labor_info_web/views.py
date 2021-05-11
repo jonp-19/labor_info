@@ -19,7 +19,10 @@ def send_data(form):
     message = "\n".join(body.values())
 
     try:
-        send_mail(subject, message, 'app212964741@heroku.com', ['jonpokorney@gmail.com']) 
+        send_mail(
+            subject, message, 'sandboxdf44949aa3e844f5b366f03c1b9ff73c.mailgun.org', 
+            ['jonpokorney@gmail.com']
+            ) 
     except BadHeaderError:
         return HttpResponse('Invalid header found.')
 
